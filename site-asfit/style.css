@@ -1,0 +1,477 @@
+/* Reset básico para tirar espaços automáticos do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* --- ESTILO DO CABEÇALHO VERDE --- */
+.header-main {
+    background: linear-gradient(135deg, #2e8b4a, #399c8c);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 20px 2%;
+    color: white;
+}
+
+
+.logo-img {
+    height: 120px; /* Ajuste o tamanho da sua logo aqui */
+}
+
+/*titulo do site*/
+.main-title {
+    font-size: 38px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* --- ESTILO DO BOTÃO DE LOGIN --- */
+.user-access {
+    text-align: center;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 18px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+
+.login-btn i {
+    font-size: 3.5rem; /* Tamanho do ícone de usuário */
+    margin-bottom: 5px;
+}
+
+.login-btn span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --- ESTILO DA BARRA DE MENU CINZA --- */
+.nav-bar {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    border-bottom: 2px solid #2e8b44;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #2e8b44;
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* efeito de underline animado */
+.nav-bar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background-color: #2e8b44;
+    transition: width 0.3s ease;
+}
+
+.nav-bar a:hover::after {
+    width: 100%;
+}
+
+
+.banner {
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* container do carousel */
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* slides */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* slide ativo */
+.slide.active {
+    opacity: 1;
+}
+
+/* texto central */
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45); /* escurece p/ leitura */
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.banner-text h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.banner-text p {
+    font-size: 22px;
+}
+
+
+/*css da galeria*/
+
+/* seção geral */
+.galeria-info {
+    padding: 60px 5%;
+    background-color: #f5f5f5;
+}
+
+/* ----- 3 imagens ----- */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05);
+}
+
+/* ----- card de informação ----- */
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    background-color: #e0e0e0;
+    padding: 40px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.card-img img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* texto do card */
+.card-texto h3 {
+    font-size: 42px;
+    margin-bottom: 60px;
+    color: #2e8b44;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-texto p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+.footer {
+    background-color: #2e8b44;
+    color: #ffffff;
+    margin-top: 80px;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px 5%;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffeb3b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-col p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.footer-col i {
+    margin-right: 8px;
+}
+
+/* redes sociais */
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 22px;
+    margin-right: 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ffeb3b;
+    transform: scale(1.2);
+}
+
+/* parte inferior */
+.footer-bottom {
+    background-color: #256f38;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+.btn-saiba-mais {
+    
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: #2e8b44;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #256f38;
+    transform: translateY(-3px);
+
+}
+
+
+/*CSS DA PAGINA LOGIN*/
+
+/* ---------- LOGIN PAGE ---------- */
+
+
+
+/* ===============================
+   LOGIN - ASFIT
+   =============================== */
+
+
+
+/* FUNDO DA PÁGINA */
+.login-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2e8b44, #1f5f34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARD DO LOGIN */
+.login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* LOGO */
+.login-logo {
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+/* TÍTULO */
+.login-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2e8b44;
+    margin-bottom: 5px;
+}
+
+/* SUBTÍTULO */
+.login-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* FORMULÁRIO */
+.login-form {
+    width: 100%;
+}
+
+/* INPUTS */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    color: #777;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* BOTÃO ENTRAR */
+.login-user-btn {
+    width: 100%;
+    padding: 14px;
+    background: #2e8b44;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.login-user-btn:hover {
+    background: #256f38;
+}
+
+/* LINKS */
+.login-links {
+    margin-top: 15px;
+}
+
+.login-links a {
+    font-size: 13px;
+    color: #2e8b44;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* AÇÕES */
+.login-actions {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* BOTÃO VOLTAR */
+.btn-secondary {
+    text-align: center;
+    padding: 11px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #dddddd;
+}
+
+/* BOTÃO CADASTRO */
+.btn-primary {
+    text-align: center;
+    padding: 13px;
+    border-radius: 8px;
+    background: #2e8b44;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #256f38;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 25px;
+    }
+
+    .login-logo {
+        width: 100px;
+    }
+}
