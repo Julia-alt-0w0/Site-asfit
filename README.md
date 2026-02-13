@@ -64,3 +64,8 @@ Projeto desenvolvido por **Anna Júlia Franco Medeiros**.
 <p align="center">
 <img src="https://github.com/user-attachments/assets/dc023147-ca75-4c09-ab9b-03c977c68cc3" alt="Logo SINDIFISCO Acre" width="200"/>
 </p>
+
+
+## Visite a visualização do site
+
+*link do site:* https://julia-alt-0w0.github.io/Site-asfit/
